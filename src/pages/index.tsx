@@ -14,8 +14,7 @@ import { FaqsModal } from "../components/faqs/faqs-modal";
 
 export default function Home() {
   const paypalOptions = {
-    "client-id":
-      "AbFKf24OF4AfwEYLqH5IrRa3hga_yasrbfE4pVNV2UalxG5QVIkG5nwqeWBMnt1TsH0Z6DBtDtBYawIk",
+    "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID as string,
     intent: "capture",
     locale: "en_GB",
   };
