@@ -32,6 +32,9 @@ const BookingForm2 = () => {
                     currency_code: "GBP",
                     value: pitchPrice.toString(),
                   },
+                  payee: {
+                    email_address: process.env.NEXT_PUBLIC_PAYPAL_PAYEE_EMAIL,
+                  },
                 },
               ],
             })

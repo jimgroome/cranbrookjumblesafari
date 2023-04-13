@@ -31,6 +31,9 @@ const BuyMapForm2 = () => {
                     currency_code: "GBP",
                     value: mapPrice.toString(),
                   },
+                  payee: {
+                    email_address: process.env.NEXT_PUBLIC_PAYPAL_PAYEE_EMAIL,
+                  },
                 },
               ],
             })
