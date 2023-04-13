@@ -52,9 +52,9 @@ export default function Home() {
                 Safari on Sunday 4th June 2023.
               </Typography>
               <Typography variant="body1" mb={2}>
-                It’s just like a car boot sale, except your pitch is your
-                driveway – so you don’t have to try and fit everything into your
-                car!
+                It&rsquo;s just like a car boot sale, except your pitch is your
+                driveway – so you don&rsquo;t have to try and fit everything
+                into your car!
               </Typography>
               <Typography variant="body1" mb={2}>
                 Your house is marked on a map, which local bargain hunters can
@@ -72,16 +72,16 @@ export default function Home() {
                 pitch sales go to Woodpeckers Preschool.
               </Typography>
               <Typography variant="body1" mb={2}>
-                Don’t have a driveway? Don’t worry. We have six pitches up for
-                grabs in the Woodpeckers car park. Email{" "}
+                Don&rsquo;t have a driveway? Don&rsquo;t worry. We have six
+                pitches up for grabs in the Woodpeckers car park. Email{" "}
                 <Link href="mailto:woodpeckerschair@gmail.com">
                   woodpeckerschair@gmail.com
                 </Link>{" "}
                 to book your space.
               </Typography>
               <Typography variant="body1" mb={2}>
-                Snap up some bargains by taking part in Cranbrook’s first jumble
-                safari!
+                Snap up some bargains by taking part in Cranbrook&rsquo;s first
+                jumble safari!
               </Typography>
               <Typography variant="body1" mb={2}>
                 Digital maps cost £1 and will be sent to you by email on the
