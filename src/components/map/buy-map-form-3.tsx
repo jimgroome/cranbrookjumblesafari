@@ -12,7 +12,8 @@ const BuyMapForm3 = () => {
     <>
       <DialogContent>
         <DialogContentText>
-          Purchase complete. Please check your email!
+          Thank you for ordering a map. We&rsquo;ll send you an email nearer the
+          time with more information!
         </DialogContentText>
       </DialogContent>
       <DialogActions>

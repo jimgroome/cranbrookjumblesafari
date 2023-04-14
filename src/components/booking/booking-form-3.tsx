@@ -12,7 +12,8 @@ const BookingForm3 = () => {
     <>
       <DialogContent>
         <DialogContentText>
-          Booking complete. Please check your email!
+          Thank you for booking a pitch. We&rsquo;ll send you an email nearer
+          the time with more information!
         </DialogContentText>
       </DialogContent>
       <DialogActions>
