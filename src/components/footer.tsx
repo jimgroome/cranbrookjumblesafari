@@ -4,17 +4,20 @@ const Footer = () => {
   return (
     <div
       style={{
-        width: "100%",
-        position: "fixed",
+        position: "absolute",
         bottom: 0,
-        left: 0,
-        textAlign: "center",
-        paddingBottom: "0.5rem",
+        width: "100%",
+        height: "2.5rem",
       }}
     >
       <Grid container>
         <Grid item xs={12}>
-          <Typography variant="caption">
+          <Typography
+            variant="caption"
+            textAlign="center"
+            width="100%"
+            display="block"
+          >
             Proceeds from sales of pitches/maps go to Woodpeckers Preschool.
             Registered Charity No: 1182859. Site by{" "}
             <a href="https://jimgroo.me" target="_blank">
