@@ -102,8 +102,8 @@ const FaqsModal = () => {
             Yes! We have room for six stalls at Woodpeckers Preschool on Quaker
             Lane for people that want to take part but don’t have a driveway.
             Email{" "}
-            <Link href="mailto:woodpeckerschair@gmail.com">
-              woodpeckerschair@gmail.com
+            <Link href="mailto:cranbrookjumblesafari@gmail.com">
+              cranbrookjumblesafari@gmail.com
             </Link>{" "}
             to book your space. There is parking available on-site.
           </DialogContentText>

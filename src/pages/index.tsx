@@ -80,8 +80,8 @@ export default function Home() {
                   <Typography variant="body1" mb={2}>
                     Don&rsquo;t have a driveway? Don&rsquo;t worry. We have six
                     pitches up for grabs in the Woodpeckers car park. Email{" "}
-                    <Link href="mailto:woodpeckerschair@gmail.com">
-                      woodpeckerschair@gmail.com
+                    <Link href="mailto:cranbrookjumblesafari@gmail.com">
+                      cranbrookjumblesafari@gmail.com
                     </Link>{" "}
                     to book your space.
                   </Typography>
