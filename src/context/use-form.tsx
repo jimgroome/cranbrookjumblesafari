@@ -10,8 +10,9 @@ export interface BookingFormValues {
   postcode?: string;
   email?: string;
   phone?: string;
-  lat?: string;
-  long?: string;
+  lat?: number;
+  long?: number;
+  agreeSign: boolean;
 }
 
 export interface AddressSuggestion {
@@ -21,7 +22,7 @@ export interface AddressSuggestion {
 }
 
 const useFormHook = () => {
-  const initialBookingFormValues = {
+  const initialBookingFormValues: BookingFormValues = {
     name: "",
     address1: "",
     address2: "",
@@ -31,12 +32,13 @@ const useFormHook = () => {
     phone: "",
     lat: 0,
     long: 0,
+    agreeSign: true,
   };
   const [bookingOpen, setBookingOpen] = useState(false);
   const [buyMapOpen, setBuyMapOpen] = useState(false);
   const [faqsOpen, setFaqsOpen] = useState(false);
   const [bookingPage, setBookingPage] = useState(1);
-  const [bookingFormValues, setBookingFormValues] = useState(
+  const [bookingFormValues, setBookingFormValues] = useState<BookingFormValues>(
     initialBookingFormValues
   );
   const initialBuyMapFormValues = {
@@ -56,12 +58,14 @@ const useFormHook = () => {
   const handlePostcodeLookup = async () => {
     try {
       setLoading(true);
-      const response = await axios(
-        `/api/postcode-lookup/?postcode=${bookingFormValues.postcode.toUpperCase()}`
-      );
-      const json = await response.data;
-      setLoading(false);
-      setAddressSuggestions(json.success.suggestions);
+      if (bookingFormValues.postcode) {
+        const response = await axios(
+          `/api/postcode-lookup/?postcode=${bookingFormValues.postcode.toUpperCase()}`
+        );
+        const json = await response.data;
+        setLoading(false);
+        setAddressSuggestions(json.success.suggestions);
+      }
     } catch (e) {
       console.log(e);
     }

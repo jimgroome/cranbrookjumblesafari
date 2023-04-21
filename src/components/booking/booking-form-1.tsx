@@ -1,9 +1,11 @@
 import {
   Backdrop,
   Button,
+  Checkbox,
   CircularProgress,
   DialogActions,
   DialogContent,
+  FormControlLabel,
   IconButton,
   InputAdornment,
   TextField,
@@ -164,6 +166,20 @@ const BookingForm1 = () => {
           sx={{ marginBottom: 2 }}
           value={bookingFormValues.town}
           InputLabelProps={{ shrink: true }}
+        />
+        <FormControlLabel
+          control={
+            <Checkbox
+              defaultChecked={bookingFormValues.agreeSign}
+              onChange={(e) =>
+                setBookingFormValues({
+                  ...bookingFormValues,
+                  agreeSign: e.target.checked,
+                })
+              }
+            />
+          }
+          label="I am happy to have an advertising board for this event put up in front of my house"
         />
       </DialogContent>
       <DialogActions>
