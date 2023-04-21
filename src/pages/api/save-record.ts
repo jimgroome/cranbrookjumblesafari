@@ -19,6 +19,7 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
       phone,
       lat,
       long,
+      agreeSign,
     } = record;
 
     mailchimp.setConfig({
@@ -41,6 +42,7 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
           LAT: lat ? lat.toString() : undefined,
           LONG: long ? long.toString() : undefined,
           RECORDTYPE: recordType,
+          AGREESIGN: agreeSign || undefined,
         },
       },
       {
