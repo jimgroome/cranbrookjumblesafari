@@ -125,9 +125,9 @@ const FaqsModal = () => {
             toys and other bric-a-brac.{" "}
           </DialogContentText>
           <DialogContentText mb={2}>
-            We will also be selling bacon sandwiches and ice cream, plus you can
-            purchase copies of the Jumble Safari map from 9am by stopping off at
-            Woodpeckers preschool.{" "}
+            We will also be selling bacon sandwiches and sweet treats, plus you
+            can purchase copies of the Jumble Safari map from 9am by stopping
+            off at Woodpeckers preschool.{" "}
           </DialogContentText>
           <DialogContentText mb={2}>
             Please note: you will not be able to drive your car onto the
