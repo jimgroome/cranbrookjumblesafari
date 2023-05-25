@@ -33,6 +33,10 @@ export default function Home() {
               name="viewport"
               content="width=device-width, initial-scale=1"
             />
+            <meta
+              name="google-site-verification"
+              content="ux4n6f2HGlCnivOjTkAOHaptgcX7aOo6RLPH8jpFM8Y"
+            />
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <div style={{ minHeight: "100vh", position: "relative" }}>
