@@ -25,7 +25,10 @@ export default function Home() {
         <FormProvider>
           <Head>
             <title>Cranbrook Jumble Safari</title>
-            <meta name="description" content="Sunday 4th June, 10am - 4pm" />
+            <meta
+              name="description"
+              content="Woodpeckers Preschool is holding our first ever Cranbrook Jumble Safari on Sunday 4th June 2023!"
+            />
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1"
