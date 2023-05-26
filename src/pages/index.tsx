@@ -80,7 +80,7 @@ export default function Home() {
                 </Grid>
                 <Grid item xs={12} mb={4}>
                   <Typography variant="body1" mb={2}>
-                    Places cost £8 if you book before Friday 26th May or £10 if
+                    Places cost £8 if you book before Tuesday 30th May or £10 if
                     you book during the week leading up to the event. All
                     profits from pitch sales go to Woodpeckers Preschool.
                   </Typography>

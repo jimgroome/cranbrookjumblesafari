@@ -66,7 +66,7 @@ const FaqsModal = () => {
           </DialogContentText>
           <DialogContentText mb={2}>
             If you want to book a pitch, we’re offering an early bird price of
-            £8 before Friday 26th May. You can still sign up until Friday 2nd
+            £8 before Tuesday 30th May. You can still sign up until Friday 2nd
             June, however it will cost £10 to secure your spot.
           </DialogContentText>
           <DialogContentText mb={2}>
