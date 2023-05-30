@@ -54,6 +54,7 @@ export const getServerSideProps: GetServerSideProps<{
     server: "us14",
   });
 
+  // @ts-ignore
   const response = await mailchimp.lists.getSegmentMembersList(
     process.env.MAILCHIMP_lIST_ID,
     process.env.MAILCHIMP_PITCH_SEGMENT_ID,
