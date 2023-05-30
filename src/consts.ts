@@ -1,2 +1,2 @@
-export const pitchPrice = 8;
+export const pitchPrice = 10;
 export const mapPrice = 1;

@@ -1217,10 +1217,10 @@
   resolved "https://registry.yarnpkg.com/@types/json5/-/json5-0.0.29.tgz#ee28707ae94e11d2b827bcbe5270bcea7f3e71ee"
   integrity sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==
 
-"@types/mailchimp__mailchimp_marketing@^3.0.8":
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/@types/mailchimp__mailchimp_marketing/-/mailchimp__mailchimp_marketing-3.0.8.tgz#0c9d387584b92c48c5ae548d04492a96ae41c4f5"
-  integrity sha512-eis38/TBVkln2wd5yKG4fr6RdBR0FsbCIW8j4tVwJf/eczrjP671eecNJ5JNgU9FiWIqkvXgaBWP5Zh3GYl8CQ==
+"@types/mailchimp__mailchimp_marketing@^3.0.9":
+  version "3.0.9"
+  resolved "https://registry.yarnpkg.com/@types/mailchimp__mailchimp_marketing/-/mailchimp__mailchimp_marketing-3.0.9.tgz#949b0b83d376879a56e2f75a3d72dca9c9724eff"
+  integrity sha512-LPWp4PjufVycpNNO2oQoGNcnj9N6cqAWXmBYeEcwslho9icDjetLyChqTgK2LevdUxE4eSQDDuEys++gkm+K2A==
 
 "@types/node@18.15.11":
   version "18.15.11"

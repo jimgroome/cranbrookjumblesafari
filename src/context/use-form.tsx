@@ -55,6 +55,8 @@ const useFormHook = () => {
     AddressSuggestion[] | null
   >(null);
 
+  const [pitchCount, setPitchCount] = useState(0);
+
   const handlePostcodeLookup = async () => {
     try {
       setLoading(true);
@@ -149,6 +151,8 @@ const useFormHook = () => {
     setLoading,
     faqsOpen,
     setFaqsOpen,
+    pitchCount,
+    setPitchCount,
   };
 };
 

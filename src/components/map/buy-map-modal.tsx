@@ -11,6 +11,7 @@ const BuyMapModal = () => {
     initialBuyMapFormValues,
     buyMapOpen,
     setBuyMapOpen,
+    pitchCount,
   } = useForm();
 
   return (
@@ -20,7 +21,7 @@ const BuyMapModal = () => {
         variant="contained"
         onClick={() => setBuyMapOpen(!buyMapOpen)}
       >
-        Buy your jumble safari map for just £1
+        Check out our {pitchCount} locations for just £1
       </Button>
       <Dialog
         onClose={() => {
