@@ -65,13 +65,8 @@ const FaqsModal = () => {
             <strong>How much does it cost to take part?</strong>
           </DialogContentText>
           <DialogContentText mb={2}>
-            If you want to book a pitch, we’re offering an early bird price of
-            £8 before Tuesday 30th May. You can still sign up until Friday 2nd
-            June, however it will cost £10 to secure your spot.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            Pitch bookings will close at midnight on Friday 2nd June to give us
-            time to complete the jumble safari map.
+            We&rsquo;re accepting entries until 8pm on Saturday 3rd June. It
+            costs £10 to participate.
           </DialogContentText>
           <DialogContentText mb={2}>
             Please{" "}
@@ -96,38 +91,18 @@ const FaqsModal = () => {
             Woodpeckers Preschool.
           </DialogContentText>
           <DialogContentText mb={2}>
-            <strong>Can I still take part if I don’t have a driveway? </strong>
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            Yes! We have room for six stalls at Woodpeckers Preschool on Quaker
-            Lane for people that want to take part but don’t have a driveway.
-            Email{" "}
-            <Link href="mailto:cranbrookjumblesafari@gmail.com">
-              cranbrookjumblesafari@gmail.com
-            </Link>{" "}
-            to book your space. There is parking available on-site.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            We kindly ask anyone setting up a stall to arrive from 9-9:30am and
-            leave between 4-4:30pm to minimise traffic, as we anticipate young
-            children visiting the site.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            Please note: you will need to provide your own table.
-          </DialogContentText>
-          <DialogContentText mb={2}>
             <strong>Will Woodpeckers have a stall?</strong>
           </DialogContentText>
           <DialogContentText mb={2}>
             Yes! It’s worth planning a trip to Woodpeckers Preschool on your
             route as there will be plenty to keep you entertained. There will be
             up to seven stalls on-site including a Woodpeckers stall selling
-            toys and other bric-a-brac.{" "}
+            toys and other bric-a-brac.
           </DialogContentText>
           <DialogContentText mb={2}>
             We will also be selling bacon sandwiches and sweet treats, plus you
             can purchase copies of the Jumble Safari map from 9am by stopping
-            off at Woodpeckers preschool.{" "}
+            off at Woodpeckers preschool.
           </DialogContentText>
           <DialogContentText mb={2}>
             Please note: you will not be able to drive your car onto the
@@ -137,7 +112,7 @@ const FaqsModal = () => {
           </DialogContentText>
           <DialogContentText mb={2}>
             <strong>
-              Where can I get hold of a Cranbrook Jumble Safari map?{" "}
+              Where can I get hold of a Cranbrook Jumble Safari map?
             </strong>
           </DialogContentText>
           <DialogContentText mb={2}>

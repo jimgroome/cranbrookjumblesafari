@@ -20,7 +20,7 @@ const BookingModal = () => {
         variant="contained"
         onClick={() => setBookingOpen(!bookingOpen)}
       >
-        Book your Jumble Safari pitch
+        Sign up to sell at the Jumble Safari
       </Button>
       <Dialog
         onClose={() => {

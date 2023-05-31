@@ -21,7 +21,7 @@ const BuyMapModal = () => {
         variant="contained"
         onClick={() => setBuyMapOpen(!buyMapOpen)}
       >
-        Check out our {pitchCount} locations for just £1
+        Preorder your Jumble Safari map for just £1
       </Button>
       <Dialog
         onClose={() => {
