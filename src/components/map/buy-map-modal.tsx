@@ -11,7 +11,6 @@ const BuyMapModal = () => {
     initialBuyMapFormValues,
     buyMapOpen,
     setBuyMapOpen,
-    pitchCount,
   } = useForm();
 
   return (

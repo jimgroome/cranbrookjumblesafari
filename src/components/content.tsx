@@ -3,17 +3,8 @@ import { BookingModal } from "./booking/booking-modal";
 import { BuyMapModal } from "./map/buy-map-modal";
 import { FaqsModal } from "./faqs/faqs-modal";
 import { Footer } from "./footer";
-import { useForm } from "@/context/use-form";
 
-interface Props {
-  pitchCount: number;
-}
-
-const Content = ({ pitchCount }: Props) => {
-  const { setPitchCount } = useForm();
-
-  setPitchCount(pitchCount);
-
+const Content = () => {
   return (
     <div style={{ minHeight: "100vh", position: "relative" }}>
       <div style={{ paddingBottom: "4rem" }}>

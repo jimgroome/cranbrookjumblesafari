@@ -8,11 +8,7 @@ import { GetServerSideProps } from "next";
 import mailchimp from "@mailchimp/mailchimp_marketing";
 import { Content } from "@/components/content";
 
-interface Props {
-  pitchCount: number;
-}
-
-export default function Home({ pitchCount }: Props) {
+export default function Home() {
   const paypalOptions = {
     "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID as string,
     intent: "capture",
@@ -39,28 +35,9 @@ export default function Home({ pitchCount }: Props) {
             />
             <link rel="icon" href="/favicon.ico" />
           </Head>
-          <Content pitchCount={pitchCount} />
+          <Content />
         </FormProvider>
       </PayPalScriptProvider>
     </ThemeProvider>
   );
 }
-
-export const getServerSideProps: GetServerSideProps<{
-  pitchCount: number;
-}> = async () => {
-  mailchimp.setConfig({
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: "us14",
-  });
-
-  // @ts-ignore
-  const response = await mailchimp.lists.getSegmentMembersList(
-    process.env.MAILCHIMP_lIST_ID,
-    process.env.MAILCHIMP_PITCH_SEGMENT_ID,
-    {
-      include_transactional: true,
-    }
-  );
-  return { props: { pitchCount: response.total_items } };
-};
