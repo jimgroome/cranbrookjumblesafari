@@ -6,7 +6,7 @@ import { Footer } from "./footer";
 
 const Content = () => {
   return (
-    <div style={{ minHeight: "100vh", position: "relative" }}>
+    <div style={{ minHeight: "100vh", position: "relative" }} className="home">
       <div style={{ paddingBottom: "4rem" }}>
         <Container
           maxWidth="md"
