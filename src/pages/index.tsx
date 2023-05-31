@@ -4,8 +4,6 @@ import "@fontsource/alegreya";
 import { FormProvider } from "../context/use-form";
 import { theme } from "../theme";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { GetServerSideProps } from "next";
-import mailchimp from "@mailchimp/mailchimp_marketing";
 import { Content } from "@/components/content";
 
 export default function Home() {

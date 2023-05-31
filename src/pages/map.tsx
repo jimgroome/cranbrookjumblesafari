@@ -1,15 +1,40 @@
-import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
-import { useMemo } from "react";
-const Map = () => {
+import {
+  GoogleMap,
+  Marker,
+  MarkerF,
+  useLoadScript,
+} from "@react-google-maps/api";
+import { useCallback, useMemo, useRef } from "react";
+import mailchimp from "@mailchimp/mailchimp_marketing";
+import { GetServerSideProps } from "next";
+interface MarkerType {
+  lat: number;
+  lng: number;
+  address: string;
+  description?: string;
+}
+interface Props {
+  markers: MarkerType[];
+}
+const Map = ({ markers }: Props) => {
   const libraries = useMemo(() => ["places"], []);
-  const mapCenter = useMemo(() => ({ lat: 51.095517, lng: 0.536049 }), []);
-
+  const mapCenter = useMemo(
+    () => ({ lat: 51.09708018168344, lng: 0.5318218385925411 }),
+    []
+  );
   const mapOptions = useMemo<google.maps.MapOptions>(
     () => ({
       disableDefaultUI: true,
       clickableIcons: true,
-      scrollwheel: false,
+      scrollwheel: true,
       zoom: 16,
+      styles: [
+        {
+          featureType: "poi",
+          elementType: "labels",
+          stylers: [{ visibility: "off" }],
+        },
+      ],
     }),
     []
   );
@@ -27,19 +52,50 @@ const Map = () => {
     <div>
       <GoogleMap
         options={mapOptions}
-        zoom={14}
         center={mapCenter}
         mapTypeId={google.maps.MapTypeId.ROADMAP}
         mapContainerStyle={{ width: "100vw", height: "100vh" }}
-        onLoad={() => console.log("Map Component Loaded...")}
       >
-        <MarkerF
-          position={mapCenter}
-          onLoad={() => console.log("Marker Loaded")}
-        />
+        {markers.map((marker) => (
+          <MarkerF
+            key={marker.address}
+            position={{ lat: marker.lat, lng: marker.lng }}
+            onLoad={() => console.log("Marker Loaded")}
+          />
+        ))}
       </GoogleMap>
     </div>
   );
 };
 
 export default Map;
+
+export const getServerSideProps: GetServerSideProps<{
+  markers: MarkerType[];
+}> = async () => {
+  mailchimp.setConfig({
+    apiKey: process.env.MAILCHIMP_API_KEY,
+    server: "us14",
+  });
+
+  // @ts-ignore
+  const pitches = await mailchimp.lists.getSegmentMembersList(
+    process.env.MAILCHIMP_lIST_ID as string,
+    process.env.MAILCHIMP_PITCH_SEGMENT_ID as string,
+    {
+      include_transactional: true,
+      count: 1000,
+    }
+  );
+
+  const markers: MarkerType[] = pitches.members.map((pitch: any) => {
+    console.log(pitch.merge_fields.LAT);
+    return {
+      lat: parseFloat(pitch.merge_fields.LAT),
+      lng: parseFloat(pitch.merge_fields.LONG),
+      address: pitch.merge_fields.ADDRESS || "",
+    };
+  });
+
+  return { props: { markers } };
+};
