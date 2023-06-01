@@ -1,10 +1,5 @@
-import {
-  GoogleMap,
-  Marker,
-  MarkerF,
-  useLoadScript,
-} from "@react-google-maps/api";
-import { useCallback, useMemo, useRef } from "react";
+import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
+import { useMemo } from "react";
 import mailchimp from "@mailchimp/mailchimp_marketing";
 import { GetServerSideProps } from "next";
 interface MarkerType {
@@ -60,7 +55,6 @@ const Map = ({ markers }: Props) => {
           <MarkerF
             key={marker.address}
             position={{ lat: marker.lat, lng: marker.lng }}
-            onLoad={() => console.log("Marker Loaded")}
           />
         ))}
       </GoogleMap>
@@ -89,7 +83,6 @@ export const getServerSideProps: GetServerSideProps<{
   );
 
   const markers: MarkerType[] = pitches.members.map((pitch: any) => {
-    console.log(pitch.merge_fields.LAT);
     return {
       lat: parseFloat(pitch.merge_fields.LAT),
       lng: parseFloat(pitch.merge_fields.LONG),
