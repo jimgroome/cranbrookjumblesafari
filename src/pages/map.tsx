@@ -56,7 +56,7 @@ const Map = ({ markers }: Props) => {
           <MarkerF
             key={marker.address}
             position={{ lat: marker.lat, lng: marker.lng }}
-            label={marker.lat.toString()}
+            // label={marker.lat.toString()}
           />
         ))}
       </GoogleMap>
