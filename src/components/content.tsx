@@ -40,8 +40,8 @@ const Content = () => {
               everyone taking part!
             </Typography>
             <Typography variant="body1" mb={2}>
-              Pre-order your map online now and we&rsquo;ll email it to you on
-              the morning of the event. Or you can collect a map on the day from
+              Order your map online now and we&rsquo;ll email it to you on the
+              day of the event. Or you can collect a map on the day from
               Woodpeckers Preschool, Quaker Lane, TN17 2HF.
             </Typography>
           </Grid>
@@ -55,21 +55,20 @@ const Content = () => {
               bacon rolls, cake, hot drinks and squash &mdash; so make sure you
               pay us a visit!
             </Typography>
-            <Typography variant="body1" mb={2} fontWeight={800}>
+            {/* <Typography variant="body1" mb={2} fontWeight={800}>
               Interested in taking part as a seller? It&rsquo;s not too late.
             </Typography>
             <Typography variant="body1" mb={2}>
               We&rsquo;re accepting entries until 8pm on Saturday 3rd June. It
               costs £10 to participate.
-            </Typography>
+            </Typography> */}
             <Typography variant="body1" mb={2}>
-              All the proceeds from pitch and map sales go to Woodpeckers
-              Preschool, but sellers get to keep any money you make on the day.
+              All the proceeds from map sales go to Woodpeckers Preschool.
             </Typography>
           </Grid>
-          <Grid item xs={12} mb={4}>
+          {/* <Grid item xs={12} mb={4}>
             <BookingModal />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} mb={2}>
             <FaqsModal />
           </Grid>
