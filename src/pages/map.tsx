@@ -42,7 +42,6 @@ const Map = ({ markers }: Props) => {
   if (!isLoaded) {
     return <p>Loading...</p>;
   }
-  markers.map((marker) => console.log(marker));
 
   return (
     <div>
