@@ -42,6 +42,7 @@ const Map = ({ markers }: Props) => {
   if (!isLoaded) {
     return <p>Loading...</p>;
   }
+  markers.map((marker) => console.log(marker));
 
   return (
     <div>
@@ -55,6 +56,7 @@ const Map = ({ markers }: Props) => {
           <MarkerF
             key={marker.address}
             position={{ lat: marker.lat, lng: marker.lng }}
+            label={marker.lat.toString()}
           />
         ))}
       </GoogleMap>

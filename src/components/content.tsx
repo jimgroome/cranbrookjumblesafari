@@ -32,22 +32,22 @@ const Content = () => {
               Safari on Sunday 4th June 2023.
             </Typography>
             <Typography variant="body1" mb={2}>
-              Families all over Cranbrook will be selling second hand bargains
-              from their garage or driveway.
+              Families all over Cranbrook are selling second hand bargains from
+              their garage or driveway.
             </Typography>
             <Typography variant="body1" mb={2}>
-              For just £1, you can get your hands on a map with the locations of
-              everyone taking part!
+              For just £1, collect a map with the locations of everyone taking
+              part from Woodpeckers Preschool, Quaker Lane, TN17 2HF.
             </Typography>
-            <Typography variant="body1" mb={2}>
+            {/* <Typography variant="body1" mb={2}>
               Order your map online now and we&rsquo;ll email it to you on the
               day of the event. Or you can collect a map on the day from
-              Woodpeckers Preschool, Quaker Lane, TN17 2HF.
-            </Typography>
+              .
+            </Typography> */}
           </Grid>
-          <Grid item xs={12} mb={4}>
+          {/* <Grid item xs={12} mb={4}>
             <BuyMapModal />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12} mb={4}>
             <Typography variant="body1" mb={2}>
               Woodpeckers&rsquo; car park will be filled with stall holders
