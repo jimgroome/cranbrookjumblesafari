@@ -23,12 +23,21 @@ const Content = () => {
           </Grid>
           <Grid item xs={12} mb={4}>
             <Typography variant="body1" align="center">
-              Thank you Cranbrook!
+              Sunday 2nd June 10am - 2pm
             </Typography>
           </Grid>
           <Grid item xs={12} mb={4}>
-            <Typography variant="body1" mb={2}>
-              Cranbrook Jumble Safari will return in Summer 2024.
+            <Typography variant="body1" mb={2} align="center">
+              Sellers £10
+            </Typography>
+            <Typography variant="body1" mb={2} align="center">
+              Maps £1
+            </Typography>
+            <Typography variant="body1" mb={2} align="center">
+              Sellers pitches on sale soon! To register your interest email{" "}
+              <a href="mailto:cranbrookjumblesafari@gmail.com">
+                cranbrookjumblesafari@gmail.com
+              </a>
             </Typography>
             {/* <Typography variant="body1" mb={2}>
               Order your map online now and we&rsquo;ll email it to you on the
