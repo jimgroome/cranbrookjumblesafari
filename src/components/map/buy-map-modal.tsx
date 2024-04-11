@@ -16,11 +16,11 @@ const BuyMapModal = () => {
   return (
     <>
       <Button
-        color="primary"
-        variant="contained"
+        variant="cta"
         onClick={() => setBuyMapOpen(!buyMapOpen)}
+        fullWidth
       >
-        Order your Jumble Safari map for just £1
+        Order your map
       </Button>
       <Dialog
         onClose={() => {

@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { ThemeProvider } from "@mui/material/styles";
-import "@fontsource/alegreya";
+import "@fontsource/antonio";
+import "@fontsource-variable/jost";
 import { FormProvider } from "../context/use-form";
 import { theme } from "../theme";
 import { PayPalScriptProvider } from "@paypal/react-paypal-js";
@@ -21,7 +22,7 @@ export default function Home() {
             <title>Cranbrook Jumble Safari</title>
             <meta
               name="description"
-              content="Woodpeckers Preschool is holding our first ever Cranbrook Jumble Safari on Sunday 4th June 2023!"
+              content="Woodpeckers Preschool is a Cranbrook Jumble Safari on Sunday 2nd June 2024!"
             />
             <meta
               name="viewport"
