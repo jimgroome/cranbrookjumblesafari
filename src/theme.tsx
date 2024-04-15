@@ -99,6 +99,14 @@ let theme = createTheme({
         },
       ],
     },
+    MuiDialogTitle: {
+      defaultProps: {
+        sx: {
+          fontFamily: '"Antonio", sans-serif',
+          textTransform: "uppercase",
+        },
+      },
+    },
   },
   palette: {
     primary: {

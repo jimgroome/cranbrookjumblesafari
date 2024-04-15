@@ -58,7 +58,7 @@ const Content = () => {
           </Grid>
           <Grid item xs={12} md={4}>
             <BookingModal />
-            <BuyMapModal />
+            {/* <BuyMapModal /> */}
           </Grid>
         </Grid>
       </Container>
