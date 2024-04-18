@@ -4,6 +4,8 @@ import { BuyMapModal } from "./map/buy-map-modal";
 import { FaqsModal } from "./faqs/faqs-modal";
 import { Footer } from "./footer";
 import BigBox from "./big-box";
+import Image from "next/image";
+import Link from "next/link";
 
 const Content = () => {
   return (
@@ -12,13 +14,13 @@ const Content = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} mb={2}>
             <BigBox borderWidth={16}>
-              <Typography variant="h1" align="center">
+              <Typography variant="h1" align="center" mb={0}>
                 Cranbrook <br />
                 Jumble Safari
               </Typography>
             </BigBox>
           </Grid>
-          <Grid item xs={12} mb={2}>
+          <Grid item xs={12}>
             <BigBox>
               <Typography
                 variant="h4"
@@ -59,6 +61,26 @@ const Content = () => {
           <Grid item xs={12} md={4}>
             <BookingModal />
             {/* <BuyMapModal /> */}
+          </Grid>
+          <Grid item xs={12} mb={2}>
+            <BigBox>
+              <Typography
+                variant="body1"
+                align="center"
+                textTransform="uppercase"
+                mb={2}
+              >
+                Thank you to Roddy New Homes for supporting this year&rsquo;s
+                event
+              </Typography>
+              <Link href="https://roddynewhomes.co.uk/" target="_blank">
+                <img
+                  src="/logo-roddy-new-homes.png"
+                  alt="Roddy New Homes"
+                  style={{ maxWidth: "100%" }}
+                />
+              </Link>
+            </BigBox>
           </Grid>
         </Grid>
       </Container>

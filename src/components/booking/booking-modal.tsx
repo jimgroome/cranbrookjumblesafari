@@ -18,7 +18,6 @@ const BookingModal = () => {
       <Button
         variant="cta"
         onClick={() => setBookingOpen(!bookingOpen)}
-        sx={{ mb: 2 }}
         fullWidth
       >
         Book your pitch
