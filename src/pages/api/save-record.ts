@@ -36,7 +36,7 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
 
     await DynamoDB.put(
       {
-        TableName: process.env.DYNAMO_DB_PETITION_RESPONSES_TABLE as string,
+        TableName: process.env.DYNAMODB_TABLE_NAME as string,
         Item: {
           recordType,
           name,
