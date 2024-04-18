@@ -40,7 +40,7 @@ let theme = createTheme({
     },
     h4: {
       ...jost,
-      textTransform: "uppercase",
+      // textTransform: "uppercase",
     },
     h3: {
       ...antonio,
@@ -48,7 +48,7 @@ let theme = createTheme({
     },
     body1: {
       ...jost,
-      textTransform: "uppercase",
+      // textTransform: "uppercase",
       // ...craftyGirls,
     },
     caption: {
@@ -82,7 +82,7 @@ let theme = createTheme({
         {
           props: { variant: "cta" },
           style: {
-            fontSize: 30,
+            fontSize: 40,
             borderRadius: 0,
             fontFamily: '"Antonio", sans-serif',
             backgroundColor: "white",

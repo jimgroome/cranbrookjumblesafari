@@ -26,7 +26,7 @@ const Content = () => {
                 variant="h4"
                 component="p"
                 align="center"
-                textTransform="uppercase"
+                // textTransform="uppercase"
                 color="primary"
               >
                 Cranbrook&rsquo;s official yard sale raising funds for
@@ -34,7 +34,7 @@ const Content = () => {
               </Typography>
             </BigBox>
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12}>
             <BigBox>
               <Typography
                 variant="h2"
@@ -58,16 +58,15 @@ const Content = () => {
               </Typography>
             </BigBox>
           </Grid>
-          <Grid item xs={12} md={4}>
+          <Grid item xs={12}>
             <BookingModal />
-            {/* <BuyMapModal /> */}
           </Grid>
-          <Grid item xs={12} mb={2}>
+          <Grid item xs={12}>
             <BigBox>
               <Typography
                 variant="body1"
                 align="center"
-                textTransform="uppercase"
+                // textTransform="uppercase"
                 mb={2}
               >
                 Thank you to Roddy New Homes for supporting this year&rsquo;s
