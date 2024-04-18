@@ -27,8 +27,8 @@ const Content = () => {
                 textTransform="uppercase"
                 color="primary"
               >
-                Turn your clutter into cash or go bargain hunting around
-                Cranbrook!
+                Cranbrook&rsquo;s official yard sale raising funds for
+                Woodpeckers Preschool CIO
               </Typography>
             </BigBox>
           </Grid>
