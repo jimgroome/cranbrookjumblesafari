@@ -25,7 +25,7 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
       },
       (error) => {
         if (error) {
-          console.log(JSON.stringify(error, null, 4));
+          console.log(error);
         }
       }
     );
