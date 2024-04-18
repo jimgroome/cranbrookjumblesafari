@@ -10,7 +10,7 @@ const Footer = () => {
         height: "2.5rem",
       }}
     >
-      <Grid container>
+      <Grid container mt={4} pb={2}>
         <Grid item xs={12}>
           <Typography
             variant="caption"

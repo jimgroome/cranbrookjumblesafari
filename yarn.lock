@@ -933,10 +933,20 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.37.0.tgz#cf1b5fa24217fe007f6487a26d765274925efa7d"
   integrity sha512-x5vzdtOOGgFVDCUs81QRB2+liax8rFg3+7hqM+QhBG0/G3F1ZsoYl97UrqgHgQ9KKT7G6c4V+aTUCgu/n22v1A==
 
+"@fontsource-variable/jost@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/jost/-/jost-5.0.18.tgz#61117d43c6b0e3c3e7055e74fb45d1d735b2f78f"
+  integrity sha512-HjW7Zfszf4Veb2ybgK68azRCT4yvX7NcY7wDBSICAyvRbnrbEmsNm2HWd1r13hG1YEyBYUdMjiZRkauHAFPQFw==
+
 "@fontsource/alegreya@^4.5.11":
   version "4.5.11"
   resolved "https://registry.yarnpkg.com/@fontsource/alegreya/-/alegreya-4.5.11.tgz#29ad93eb27d82d1e5bb46295720f7e6851bc0a6d"
   integrity sha512-5Coej7W5qCTfJxceDKaiRTzOY+Fnumo+g/plntZWda3EDXtdbeq3TjSMLEanKcqOX68rktUOgfHXeWgahjoLww==
+
+"@fontsource/antonio@^5.0.19":
+  version "5.0.19"
+  resolved "https://registry.yarnpkg.com/@fontsource/antonio/-/antonio-5.0.19.tgz#b36168043ea82b32d1b1e126eac01895fd20757f"
+  integrity sha512-ysbUb7PIXky+9K2o3eBFt/RZc1r6RMrJmtwTLPfFaudb2MV8wcwJ6otTH/o8P30WFU5WWF5f0pIVrphjzq91rg==
 
 "@googlemaps/js-api-loader@1.15.1":
   version "1.15.1"

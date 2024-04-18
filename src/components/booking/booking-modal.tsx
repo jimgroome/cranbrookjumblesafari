@@ -16,11 +16,11 @@ const BookingModal = () => {
   return (
     <>
       <Button
-        color="primary"
-        variant="contained"
+        variant="cta"
         onClick={() => setBookingOpen(!bookingOpen)}
+        fullWidth
       >
-        Sign up to sell at the Jumble Safari
+        Book your pitch
       </Button>
       <Dialog
         onClose={() => {
