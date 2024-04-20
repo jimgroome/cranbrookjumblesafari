@@ -16,7 +16,7 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
 
     const { body } = req;
 
-    const record = { ...body, id: uuid(), time };
+    const record = { ...body, id: uuid() };
 
     await DynamoDB.put(
       {
