@@ -1,7 +1,30 @@
 import Client from "getaddress-api";
 import { NextApiRequest, NextApiResponse } from "next";
+import AWS from "aws-sdk";
+import { v4 as uuid } from "uuid";
+
+AWS.config.update({
+  region: "eu-west-2",
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
+});
 
 const postcodeLookup = async (req: NextApiRequest, res: NextApiResponse) => {
+  const DynamoDB = new AWS.DynamoDB.DocumentClient();
+  const record = { id: uuid() };
+
+  await DynamoDB.put(
+    {
+      TableName: process.env.DYNAMODB_TABLE_NAME as string,
+      Item: record,
+    },
+    (error) => {
+      if (error) {
+        console.log(error);
+      }
+    }
+  );
+
   const api = new Client(process.env.GETADDRESS_API_KEY as string);
 
   const { postcode } = req.query as { postcode: string };
