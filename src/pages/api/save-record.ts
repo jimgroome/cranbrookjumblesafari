@@ -28,7 +28,19 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
           console.log(error);
         }
       }
-    );
+    ).promise();
+
+    await DynamoDB.put(
+      {
+        TableName: process.env.DYNAMODB_TABLE_NAME as string,
+        Item: { id: uuid(), test: "Sausages" },
+      },
+      (error) => {
+        if (error) {
+          console.log(error);
+        }
+      }
+    ).promise();
 
     res.status(200).json({});
   } catch (error) {

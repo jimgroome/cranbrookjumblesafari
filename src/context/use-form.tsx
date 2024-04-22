@@ -97,6 +97,17 @@ const useFormHook = () => {
         recordType,
       });
       setLoading(false);
+
+      console.log(
+        JSON.stringify(
+          {
+            ...(recordType === "pitch" ? bookingFormValues : buyMapFormValues),
+            recordType,
+          },
+          null,
+          4
+        )
+      );
     } catch (error) {
       console.log(error);
     }

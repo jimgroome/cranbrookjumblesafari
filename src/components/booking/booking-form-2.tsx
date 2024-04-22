@@ -44,6 +44,7 @@ const BookingForm2 = () => {
         }}
         onApprove={async (data, actions) => {
           if (actions && actions.order) {
+            console.log(actions.order.capture());
             return actions.order.capture().then(async () => {
               await handleSaveRecord("pitch");
               handleBookingNavigation(3);

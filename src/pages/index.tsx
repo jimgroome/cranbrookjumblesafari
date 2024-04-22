@@ -22,7 +22,7 @@ export default function Home() {
             <title>Cranbrook Jumble Safari</title>
             <meta
               name="description"
-              content="Woodpeckers Preschool is a Cranbrook Jumble Safari on Sunday 2nd June 2024!"
+              content="Woodpeckers Preschool is hosting Cranbrook Jumble Safari on Sunday 2nd June 2024!"
             />
             <meta
               name="viewport"
