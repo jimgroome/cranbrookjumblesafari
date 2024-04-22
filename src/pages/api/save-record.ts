@@ -30,17 +30,36 @@ const saveRecord = async (req: NextApiRequest, res: NextApiResponse) => {
       }
     ).promise();
 
-    await DynamoDB.put(
-      {
-        TableName: process.env.DYNAMODB_TABLE_NAME as string,
-        Item: { id: uuid(), test: "Sausages" },
+    const client = new AWS.SES({
+      accessKeyId: process.env.ACCESS_KEY_ID,
+      secretAccessKey: process.env.SECRET_ACCESS_KEY,
+      region: "eu-west-2",
+    });
+
+    const params: AWS.SES.SendEmailRequest = {
+      Destination: {
+        ToAddresses: ["cranbrookjumblesafari@gmail.com"],
       },
-      (error) => {
-        if (error) {
-          console.log(error);
-        }
-      }
-    ).promise();
+      Message: {
+        Body: {
+          Html: {
+            Charset: "UTF-8",
+            Data: `<div><p>Someone just signed up to the Jumble Safari!</p><p>Name: ${record.name}<br />Email: ${record.email}</p></div>`,
+          },
+          Text: {
+            Charset: "UTF-8",
+            Data: "Sign up!",
+          },
+        },
+        Subject: {
+          Charset: "UTF-8",
+          Data: "Cranbrook Jumble Safari pitch alert",
+        },
+      },
+      Source: `Jim Groome <james@jgroome.com>`,
+    };
+
+    await client.sendEmail(params).promise();
 
     res.status(200).json({});
   } catch (error) {
