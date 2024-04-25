@@ -9,16 +9,12 @@ import {
 import { useForm } from "../../context/use-form";
 
 const FaqsModal = () => {
-  const { setBuyMapOpen, setBookingOpen, setFaqsOpen, faqsOpen } = useForm();
+  const { setFaqsOpen, faqsOpen } = useForm();
 
   return (
     <>
-      <Button
-        color="primary"
-        variant="contained"
-        onClick={() => setFaqsOpen(!faqsOpen)}
-      >
-        FAQs
+      <Button fullWidth variant="cta" onClick={() => setFaqsOpen(!faqsOpen)}>
+        Find out more
       </Button>
       <Dialog
         onClose={() => {
@@ -33,121 +29,97 @@ const FaqsModal = () => {
             <strong>What is a jumble safari?</strong>
           </DialogContentText>
           <DialogContentText mb={2}>
-            A jumble safari is a cross between a jumble sale and a car boot
-            fair.
+            A jumble safari is a bit like a car boot sale. But instead of
+            driving to a field you use your own driveway!You don’t have to worry
+            about packing everything away and you’ve got the kettle and a nice
+            toilet close to hand.
           </DialogContentText>
           <DialogContentText mb={2}>
-            Like a boot sale, you set up your own table, sell whatever you want
-            (within reason!) and keep the money you make from selling your
-            unwanted items. The main difference is that it’s not held in a
-            field.
+            <strong>Can I keep any money I make on the day?</strong>
           </DialogContentText>
           <DialogContentText mb={2}>
-            Instead, you set up your stall on your own driveaway and people come
-            to visit you.
+            Yes! You pay £10 to Woodpeckers Preschool to take part and then any
+            money you make on the day goes straight into your pocket. It’s a
+            great way to turn your clutter into cash.
           </DialogContentText>
           <DialogContentText mb={2}>
-            It’s much better than a car boot sale as there’s no need to load up
-            your car before and after, you can put up a shelter or gazebo to
-            stay comfortable, and drinks, snacks and a decent toilet are only a
-            few steps away!
+            <strong>How do people find my house?</strong>
           </DialogContentText>
           <DialogContentText mb={2}>
-            <strong>How will people find our driveway? </strong>
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            When you book your pitch for Cranbrook Jumble Safari we’ll ask you
-            to share your address. We’ll number your house on a map of Cranbrook
-            that will be available to bargain hunters on the day of the event,
-            so people will know where to find you.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            <strong>How much does it cost to take part?</strong>
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            We&rsquo;re accepting entries until 8pm on Saturday 3rd June. It
-            costs £10 to participate.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            Please{" "}
-            <Link
-              onClick={(e) => {
-                e.preventDefault();
-                setBookingOpen(true);
-                setFaqsOpen(false);
-              }}
-              component="a"
-              href="#"
-            >
-              book your pitch online
-            </Link>{" "}
-            and pay via PayPal.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            If you want to grab a bargain, maps will cost £1 per copy.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            All money raised from the sale of pitches will be donated to
-            Woodpeckers Preschool.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            <strong>Will Woodpeckers have a stall?</strong>
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            Yes! It’s worth planning a trip to Woodpeckers Preschool on your
-            route as there will be plenty to keep you entertained. There will be
-            up to seven stalls on-site including a Woodpeckers stall selling
-            toys and other bric-a-brac.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            We will also be selling bacon sandwiches and sweet treats, plus you
-            can purchase copies of the Jumble Safari map from 9am by stopping
-            off at Woodpeckers preschool.
-          </DialogContentText>
-          <DialogContentText mb={2}>
-            Please note: you will not be able to drive your car onto the
-            Woodpeckers site during the Jumble Safari event. We are hoping to
-            gain permission to use the field next door for parking and will
-            update this website when further details are available.
+            The address of every person that signs is added to our official
+            Cranbrook Safari map. People can pick up a map on the day from
+            Woodpeckers Preschool and follow the route around the town. We will
+            also provide signage to show you’re an official seller - and we
+            encourage you to decorate your driveway to make your house stand
+            out!
           </DialogContentText>
           <DialogContentText mb={2}>
             <strong>
-              Where can I get hold of a Cranbrook Jumble Safari map?
+              I live out of town/I don’t have a driveway but I want to sell. Can
+              I still take part?
             </strong>
           </DialogContentText>
           <DialogContentText mb={2}>
-            You can{" "}
-            <Link
-              onClick={(e) => {
-                e.preventDefault();
-                setBuyMapOpen(true);
-                setFaqsOpen(false);
-              }}
-              component="a"
-              href="#"
-            >
-              buy a map online
+            We have a limited number of spaces to sell in the Woodpeckers
+            Preschool car park, available on a first-come, first-served basis.
+            Email{" "}
+            <Link href="mailto:cranbrookjumblesafari@gmail.com">
+              cranbrookjumblesafari@gmail.com
             </Link>{" "}
-            now for £1. When you check out we will ask for your email address –
-            this is so we can send you a PDF copy of the map on the morning of
-            the Jumble Safari.
+            to check if we have any spaces left.
           </DialogContentText>
           <DialogContentText mb={2}>
-            Printed maps will also be available on the day from Woodpeckers
-            Preschool on Quaker Lane, and from selected shops in Cranbrook. More
-            information on this will be provided nearer the time.
+            <strong>Are there any restrictions on what I can sell?</strong>
           </DialogContentText>
           <DialogContentText mb={2}>
-            Please note: unfortunately we can’t send out copies of the map in
-            advance as we don’t want it to be shared unofficially. Remember, all
-            funds raised from the sale of maps will support Woodpeckers
-            Preschool!
+            Other than the usual legal requirements for what you can/can’t sell,
+            the only thing we ask is that participants do not sell food or
+            drink.
           </DialogContentText>
-          <Button
-            color="primary"
-            variant="contained"
-            onClick={() => setFaqsOpen(false)}
-          >
+          <DialogContentText mb={2}>
+            Refreshments will be available from Woodpeckers and any food/drink
+            being sold for personal gain could take funds away from the
+            preschool.
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            <strong>
+              I want to do some bargain hunting. How do I buy a map?
+            </strong>
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            Maps cost £1 and can be purchased from Woodpeckers Preschool, Quaker
+            Lane, Cranbrook, TN17 2HF from 10am on the day of the event.
+          </DialogContentText>
+
+          <DialogContentText mb={2}>
+            We take both cash and card payments.
+          </DialogContentText>
+
+          <DialogContentText mb={2}>
+            <strong>Where do I park on the day?</strong>
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            There will free parking in the field next door to Woodpeckers.
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            <strong>Will you be selling refreshments?</strong>
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            Yes! There will also be bacon rolls, tea & coffee, cold drinks and
+            cakes on sale to fuel you up before you set off!
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            <strong>Got any more questions?</strong>
+          </DialogContentText>
+          <DialogContentText mb={2}>
+            Email{" "}
+            <Link href="mailto:cranbrookjumblesafari@gmail.com">
+              cranbrookjumblesafari@gmail.com
+            </Link>{" "}
+            and we’ll be happy to answer them.
+          </DialogContentText>
+
+          <Button variant="cta" onClick={() => setFaqsOpen(false)} fullWidth>
             Close
           </Button>
         </DialogContent>
