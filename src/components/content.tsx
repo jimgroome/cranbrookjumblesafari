@@ -64,7 +64,7 @@ const Content = () => {
           <Grid item xs={12}>
             <BookingModal />
           </Grid>
-          {/* <Grid item xs={12}>
+          <Grid item xs={12}>
             <BigBox>
               <Typography
                 variant="body1"
@@ -83,7 +83,7 @@ const Content = () => {
                 />
               </Link>
             </BigBox>
-          </Grid> */}
+          </Grid>
         </Grid>
       </Container>
 
