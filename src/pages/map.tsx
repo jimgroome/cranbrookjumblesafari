@@ -2,7 +2,9 @@ import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
 import { useMemo } from "react";
 import mailchimp from "@mailchimp/mailchimp_marketing";
 import { GetServerSideProps } from "next";
-interface MarkerType {
+import AWS from "aws-sdk";
+import MapMarker from "@/components/map-marker";
+export interface MarkerType {
   lat: number;
   lng: number;
   address: string;
@@ -52,11 +54,7 @@ const Map = ({ markers }: Props) => {
         mapContainerStyle={{ width: "100vw", height: "100vh" }}
       >
         {markers.map((marker) => (
-          <MarkerF
-            key={marker.address}
-            position={{ lat: marker.lat, lng: marker.lng }}
-            // label={marker.lat.toString()}
-          />
+          <MapMarker marker={marker} key={marker.address} />
         ))}
       </GoogleMap>
     </div>
@@ -68,28 +66,54 @@ export default Map;
 export const getServerSideProps: GetServerSideProps<{
   markers: MarkerType[];
 }> = async () => {
-  mailchimp.setConfig({
-    apiKey: process.env.MAILCHIMP_API_KEY,
-    server: "us14",
+  AWS.config.update({
+    region: "eu-west-2",
+    accessKeyId: process.env.ACCESS_KEY_ID,
+    secretAccessKey: process.env.SECRET_ACCESS_KEY,
   });
-
-  // @ts-ignore
-  const pitches = await mailchimp.lists.getSegmentMembersList(
-    process.env.MAILCHIMP_lIST_ID as string,
-    process.env.MAILCHIMP_PITCH_SEGMENT_ID as string,
+  const DynamoDB = new AWS.DynamoDB.DocumentClient();
+  const pitches = await DynamoDB.scan(
     {
-      include_transactional: true,
-      count: 1000,
+      TableName: process.env.DYNAMODB_TABLE_NAME as string,
+    },
+    (error) => {
+      if (error) {
+        console.log(error);
+      }
     }
-  );
+  ).promise();
 
-  const markers: MarkerType[] = pitches.members.map((pitch: any) => {
-    return {
-      lat: parseFloat(pitch.merge_fields.LAT),
-      lng: parseFloat(pitch.merge_fields.LONG),
-      address: pitch.merge_fields.ADDRESS || "",
-    };
-  });
+  console.log(JSON.stringify(pitches, null, 4));
+
+  // mailchimp.setConfig({
+  //   apiKey: process.env.MAILCHIMP_API_KEY,
+  //   server: "us14",
+  // });
+
+  // // @ts-ignore
+  // const pitches = await mailchimp.lists.getSegmentMembersList(
+  //   process.env.MAILCHIMP_lIST_ID as string,
+  //   process.env.MAILCHIMP_PITCH_SEGMENT_ID as string,
+  //   {
+  //     include_transactional: true,
+  //     count: 1000,
+  //   }
+  // );
+
+  // const markers: MarkerType[] = pitches.members.map((pitch: any) => {
+  //   return {
+  //     lat: parseFloat(pitch.merge_fields.LAT),
+  //     lng: parseFloat(pitch.merge_fields.LONG),
+  //     address: pitch.merge_fields.ADDRESS || "",
+  //   };
+  // });
+
+  const markers =
+    pitches.Items?.map(({ lat, long: lng, address1: address }) => ({
+      lat,
+      lng,
+      address,
+    })) || [];
 
   return { props: { markers } };
 };
