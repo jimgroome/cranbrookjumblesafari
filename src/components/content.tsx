@@ -61,9 +61,9 @@ const Content = () => {
           <Grid item xs={12}>
             <FaqsModal />
           </Grid>
-          <Grid item xs={12}>
+          {/* <Grid item xs={12}>
             <BookingModal />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
             <BigBox>
               <Typography

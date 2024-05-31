@@ -22,7 +22,11 @@ const MapMarker = ({ marker }: MapMarkerProps) => {
       position={{ lat: marker.lat, lng: marker.lng }}
       onClick={() => {
         console.log(marker.address);
-        setOpen(!open);
+      }}
+      label={{
+        text: marker.order?.toString() || "",
+        color: "white",
+        fontWeight: "bold",
       }}
     >
       {open && (

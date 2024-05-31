@@ -1,6 +1,5 @@
-import { GoogleMap, MarkerF, useLoadScript } from "@react-google-maps/api";
+import { GoogleMap, useLoadScript } from "@react-google-maps/api";
 import { useMemo } from "react";
-import mailchimp from "@mailchimp/mailchimp_marketing";
 import { GetServerSideProps } from "next";
 import AWS from "aws-sdk";
 import MapMarker from "@/components/map-marker";
@@ -9,6 +8,7 @@ export interface MarkerType {
   lng: number;
   address: string;
   description?: string;
+  order?: number;
 }
 interface Props {
   markers: MarkerType[];
@@ -24,7 +24,7 @@ const Map = ({ markers }: Props) => {
       disableDefaultUI: true,
       clickableIcons: true,
       scrollwheel: true,
-      zoom: 16,
+      zoom: 15,
       styles: [
         {
           featureType: "poi",
@@ -83,37 +83,27 @@ export const getServerSideProps: GetServerSideProps<{
     }
   ).promise();
 
-  console.log(JSON.stringify(pitches, null, 4));
-
-  // mailchimp.setConfig({
-  //   apiKey: process.env.MAILCHIMP_API_KEY,
-  //   server: "us14",
-  // });
-
-  // // @ts-ignore
-  // const pitches = await mailchimp.lists.getSegmentMembersList(
-  //   process.env.MAILCHIMP_lIST_ID as string,
-  //   process.env.MAILCHIMP_PITCH_SEGMENT_ID as string,
-  //   {
-  //     include_transactional: true,
-  //     count: 1000,
-  //   }
-  // );
-
-  // const markers: MarkerType[] = pitches.members.map((pitch: any) => {
-  //   return {
-  //     lat: parseFloat(pitch.merge_fields.LAT),
-  //     lng: parseFloat(pitch.merge_fields.LONG),
-  //     address: pitch.merge_fields.ADDRESS || "",
-  //   };
-  // });
-
   const markers =
-    pitches.Items?.map(({ lat, long: lng, address1: address }) => ({
+    pitches.Items?.map(({ lat, long: lng, address1: address, order = 0 }) => ({
       lat,
       lng,
       address,
+      order,
     })) || [];
+
+  // if (pitches.Items)
+  //   console.log(
+  //     JSON.stringify(
+  //       pitches.Items.filter((marker) => !!marker.order)
+  //         .sort((a, b) => a.order - b.order)
+  //         .map(
+  //           (marker) =>
+  //             `${marker.order}: ${marker.address1}, ${marker.address2}, ${marker.postcode}`
+  //         ),
+  //       null,
+  //       4
+  //     )
+  //   );
 
   return { props: { markers } };
 };
